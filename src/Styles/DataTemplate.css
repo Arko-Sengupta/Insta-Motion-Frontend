@@ -1,0 +1,134 @@
+.data-template {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.data-template__toggle {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 6px 0;
+  background: linear-gradient(135deg, #f58529, #dd2a7b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.data-template__toggle:hover {
+  opacity: 0.8;
+}
+
+.data-template__content {
+  margin-top: 1rem;
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.data-template__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 0.5rem;
+}
+
+.data-template__desc {
+  font-size: 0.85rem;
+  color: #a8a8a8;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.data-template__section {
+  margin-bottom: 1.5rem;
+}
+
+.data-template__section h4 {
+  font-size: 0.8rem;
+  color: #a8a8a8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.data-template__table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #262626;
+}
+
+.data-template__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.data-template__table th {
+  background: #1c1c1e;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #a8a8a8;
+  white-space: nowrap;
+}
+
+.data-template__table td {
+  padding: 8px 12px;
+  border-top: 1px solid #262626;
+  color: #dbdbdb;
+}
+
+.data-template__col-name {
+  font-weight: 600;
+  background: linear-gradient(135deg, #f58529, #dd2a7b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.data-template__col-type {
+  color: #737373;
+  font-style: italic;
+}
+
+.data-template__notes {
+  margin-top: 1rem;
+}
+
+.data-template__notes h4 {
+  font-size: 0.8rem;
+  color: #a8a8a8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.data-template__notes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.data-template__notes li {
+  font-size: 0.8rem;
+  color: #737373;
+  padding: 4px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.data-template__notes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f58529, #dd2a7b);
+  transform: translateY(-50%);
+}

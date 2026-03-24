@@ -1,0 +1,132 @@
+.app {
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.app__subheader {
+  color: #a8a8a8;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.app__placeholder {
+  text-align: center;
+  color: #737373;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.app__error {
+  text-align: center;
+  padding: 1rem;
+  color: #ed4956;
+  background: rgba(237, 73, 86, 0.1);
+  border: 1px solid rgba(237, 73, 86, 0.3);
+  border-radius: 12px;
+}
+
+.app__error-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.app__success {
+  text-align: center;
+  padding: 1rem;
+  color: #78e08f;
+  background: rgba(120, 224, 143, 0.08);
+  border: 1px solid rgba(120, 224, 143, 0.2);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.app__results-header {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.app__file-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.app__file-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.app__file-name {
+  color: #dbdbdb;
+  font-size: 0.95rem;
+}
+
+.app__file-name strong {
+  background: linear-gradient(135deg, #f58529, #dd2a7b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app__analyze-btn {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.app__analyze-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.app__analyze-btn:active {
+  transform: scale(0.98);
+}
+
+.app__analyze-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.app__reset-btn {
+  background: none;
+  border: 1px solid #363636;
+  color: #a8a8a8;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.app__reset-btn:hover {
+  border-color: #dd2a7b;
+  color: #f5f5f5;
+}
+
+.app__new-analysis {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #262626;
+}

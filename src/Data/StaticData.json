@@ -1,0 +1,126 @@
+{
+  "App": {
+    "Title": "Instagram Sentiment Analysis",
+    "SubHeader": "Upload An Excel File With Instagram Posts To Analyze Sentiments Of Captions And Comments.",
+    "FileLoaded": "File Loaded:",
+    "AnalyzeButton": "Analyze Data",
+    "AnalyzingButton": "Analyzing...",
+    "LoadingMessage": "Processing Sentiment Analysis... This May Take A Moment.",
+    "SuccessMessage": "Sentiment Analysis Completed Successfully.",
+    "ResultsHeader": "Post-Level Analysis",
+    "Placeholder": "Upload Data For Analysis And View The Results Here.",
+    "DefaultError": "Something Went Wrong. Please Try Again.",
+    "NetworkError": "Unable To Connect To The Server. Please Make Sure The Backend Is Running.",
+    "TimeoutError": "The Request Took Too Long. Try With Fewer Rows Or Check Your Connection.",
+    "ChangeFile": "Change File",
+    "TryAgain": "Try Again",
+    "NewAnalysis": "New Analysis"
+  },
+  "FileUpload": {
+    "DropMessage": "Drop The Excel File Here...",
+    "DragMessage": "Drag & Drop An Excel File Here, Or Click To Select",
+    "Hint": ".xlsx Files Only"
+  },
+  "PostAnalysis": {
+    "PostLink": "Post Link:",
+    "ClickHere": "Click Here",
+    "LikesCommentsTitle": "Likes & Comments Count",
+    "CaptionSentimentTitle": "Caption Sentiment",
+    "CommentsSentimentTitle": "Comments Sentiment Analysis",
+    "SentimentLabels": ["Negative", "Neutral", "Positive"],
+    "SentimentColors": ["#ed4956", "#a8a8a8", "#78e08f"],
+    "BarColors": ["#dd2a7b", "#8134af"],
+    "Likes": "Likes",
+    "Comments": "Comments"
+  },
+  "ProfileInsights": {
+    "Title": "Profile Insights",
+    "EngagementOverview": "Engagement Overview",
+    "TotalPosts": "Total Posts",
+    "TotalLikes": "Total Likes",
+    "TotalComments": "Total Comments",
+    "AvgEngagement": "Avg Engagement / Post",
+    "AvgLikes": "Avg Likes / Post",
+    "AvgComments": "Avg Comments / Post",
+    "OverallCaptionSentiment": "Overall Caption Sentiment",
+    "DominantSentiment": "Dominant Sentiment",
+    "AvgNegative": "Avg Negative",
+    "AvgNeutral": "Avg Neutral",
+    "AvgPositive": "Avg Positive",
+    "CommentsSentimentSummary": "Comments Sentiment Summary",
+    "TotalCommentsAnalyzed": "Total Comments Analyzed",
+    "DominantCommentSentiment": "Dominant Comment Sentiment",
+    "SentimentTrendTitle": "Sentiment Trend Over Time",
+    "EngagementVsSentimentTitle": "Engagement Vs Positive Sentiment",
+    "PositiveSentimentLabel": "Positive Sentiment %",
+    "TotalEngagementLabel": "Total Engagement",
+    "NotablePosts": "Notable Posts",
+    "MostPositive": "Most Positive",
+    "MostNegative": "Most Negative",
+    "MostEngaged": "Most Engaged",
+    "NotAvailable": "N/A",
+    "ViewPost": "View Post",
+    "ScatterTooltip": {
+      "Post": "Post:",
+      "Positive": "Positive:",
+      "Likes": "Likes:",
+      "Comments": "Comments:",
+      "TotalEngagement": "Total Engagement:"
+    },
+    "TopPostLabels": {
+      "Likes": "Likes:",
+      "Comments": "Comments:",
+      "Neg": "Neg:",
+      "Neu": "Neu:",
+      "Pos": "Pos:"
+    },
+    "TrendLines": [
+      { "DataKey": "Negative", "Stroke": "#ed4956" },
+      { "DataKey": "Neutral", "Stroke": "#a8a8a8" },
+      { "DataKey": "Positive", "Stroke": "#78e08f" }
+    ]
+  },
+  "DataTemplate": {
+    "ShowGuide": "View Required Data Format",
+    "HideGuide": "Hide Data Format Guide",
+    "Title": "Excel File Format Guide",
+    "Description": "Your .xlsx File Must Contain The Following Columns. Each Row Represents One Instagram Post.",
+    "RequiredColumnsTitle": "Required Columns",
+    "ColumnHeader": "Column",
+    "TypeHeader": "Type",
+    "DescriptionHeader": "Description",
+    "Columns": [
+      { "Name": "Post_ID", "Type": "String", "Description": "Unique Identifier For The Post" },
+      { "Name": "Post_Text", "Type": "String", "Description": "Caption Text Of The Post" },
+      { "Name": "Post_Date", "Type": "String", "Description": "Date Of The Post (YYYY-MM-DD)" },
+      { "Name": "Likes_Count", "Type": "Integer", "Description": "Number Of Likes On The Post" },
+      { "Name": "Comments_Count", "Type": "Integer", "Description": "Number Of Comments On The Post" },
+      { "Name": "Comments", "Type": "String", "Description": "List Of Comments As A String E.g. ['Great!', 'Nice!']" },
+      { "Name": "Image_URL", "Type": "String", "Description": "URL Of The Post Image" },
+      { "Name": "Post_URL", "Type": "String", "Description": "Instagram URL Of The Post" }
+    ],
+    "SampleTitle": "Sample Data",
+    "SampleHeaders": ["Post_ID", "Post_Text", "Post_Date", "Likes_Count", "Comments_Count", "Comments", "Post_URL"],
+    "SampleRows": [
+      ["B1abc123", "Having a Good Day!", "2024-09-10", "123", "2", "['Beautiful!', 'So lovely!']", "https://instagram.com/p/B1abc123/"],
+      ["B2def456", "Love this moment!", "2024-09-12", "456", "3", "['Awesome!', 'Wow!', 'Best!']", "https://instagram.com/p/B2def456/"]
+    ],
+    "NotesTitle": "Important Notes",
+    "Notes": [
+      "File Must Be In .xlsx Format (Excel)",
+      "Comments Column Must Be A String Representation Of A List E.g. ['Comment1', 'Comment2']",
+      "All Columns Are Required For Accurate Analysis",
+      "Post_Date Should Follow YYYY-MM-DD Format For Correct Trend Analysis",
+      "Large Files (500+ Rows) May Take Several Minutes To Process"
+    ]
+  },
+  "DataTable": {
+    "DisplayColumns": [
+      "Post_ID",
+      "Post_Text",
+      "Post_Date",
+      "Likes_Count",
+      "Comments_Count"
+    ]
+  }
+}
