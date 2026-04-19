@@ -1,34 +1,11 @@
 import BarChart from "../Charts/BarChart";
+import CommentsBarChart from "../Charts/CommentsBarChart";
 import PieChart from "../Charts/PieChart";
 import StaticData from "../Data/StaticData.json";
 import "../Styles/PostAnalysis.css";
 
 const { PostAnalysis: PostText } = StaticData;
 
-const CommentsTooltip = ({ active, payload }) => {
-  if (!active || !payload?.length) return null;
-  const Entry = payload[0]?.payload;
-  return (
-    <div
-      style={{
-        background: "#1c1c1e",
-        border: "1px solid #262626",
-        padding: "10px 14px",
-        borderRadius: 12,
-        color: "#f5f5f5",
-        fontSize: 12,
-        maxWidth: 280,
-      }}
-    >
-      <p style={{ marginBottom: 6, fontWeight: 600 }}>{Entry.FullComment}</p>
-      {payload.map((P) => (
-        <p key={P.dataKey} style={{ color: P.fill }}>
-          {P.dataKey}: {P.value}%
-        </p>
-      ))}
-    </div>
-  );
-};
 
 const PostAnalysis = ({ Post }) => {
   const PostUrl = Post.Post_URL || "#";
@@ -87,20 +64,7 @@ const PostAnalysis = ({ Post }) => {
       {CommentsData.length > 0 && (
         <div className="post-analysis__card post-analysis__card--full">
           <h4>{PostText.CommentsSentimentTitle}</h4>
-          <BarChart
-            Data={CommentsData}
-            Height={Math.max(300, CommentsData.length * 25 + 100)}
-            CategoryGap="20%"
-            ShowLegend={true}
-            YDomain={[0, 100]}
-            YFormatter={(V) => `${V}%`}
-            CustomTooltip={<CommentsTooltip />}
-            Bars={[
-              { DataKey: "Negative", Fill: "#ed4956", Radius: [4, 4, 0, 0] },
-              { DataKey: "Neutral", Fill: "#a8a8a8", Radius: [4, 4, 0, 0] },
-              { DataKey: "Positive", Fill: "#78e08f", Radius: [4, 4, 0, 0] },
-            ]}
-          />
+          <CommentsBarChart Data={CommentsData} />
         </div>
       )}
     </div>
