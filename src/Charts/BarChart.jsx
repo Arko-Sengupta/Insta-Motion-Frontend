@@ -16,6 +16,9 @@ const TOOLTIP_STYLE = {
   color: "#f5f5f5",
 };
 
+const TOOLTIP_ITEM_STYLE  = { color: "#f5f5f5" };
+const TOOLTIP_LABEL_STYLE = { color: "#a8a8a8" };
+
 const BarChart = ({
   Data,
   Bars,
@@ -38,6 +41,8 @@ const BarChart = ({
       <Tooltip
         content={CustomTooltip}
         contentStyle={!CustomTooltip ? TOOLTIP_STYLE : undefined}
+        itemStyle={!CustomTooltip ? TOOLTIP_ITEM_STYLE : undefined}
+        labelStyle={!CustomTooltip ? TOOLTIP_LABEL_STYLE : undefined}
       />
       {ShowLegend && <Legend wrapperStyle={{ fontSize: 12, color: "#a8a8a8" }} />}
       {Bars.map((BarConfig, Idx) => (

@@ -15,6 +15,9 @@ const TOOLTIP_STYLE = {
   color: "#f5f5f5",
 };
 
+const TOOLTIP_ITEM_STYLE  = { color: "#f5f5f5" };
+const TOOLTIP_LABEL_STYLE = { color: "#a8a8a8" };
+
 const LineChart = ({
   Data,
   Lines,
@@ -39,6 +42,8 @@ const LineChart = ({
       />
       <Tooltip
         contentStyle={TOOLTIP_STYLE}
+        itemStyle={TOOLTIP_ITEM_STYLE}
+        labelStyle={TOOLTIP_LABEL_STYLE}
         formatter={TooltipFormatter}
       />
       <Legend wrapperStyle={{ fontSize: 12, color: "#a8a8a8" }} />

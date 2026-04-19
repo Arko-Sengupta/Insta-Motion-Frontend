@@ -14,7 +14,8 @@ const TOOLTIP_STYLE = {
   color: "#f5f5f5",
 };
 
-const TOOLTIP_ITEM_STYLE = { color: "#f5f5f5" };
+const TOOLTIP_ITEM_STYLE  = { color: "#f5f5f5" };
+const TOOLTIP_LABEL_STYLE = { color: "#a8a8a8" };
 
 const renderLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, value }) => {
   if (value < 5) return null;
@@ -64,6 +65,7 @@ const PieChart = ({
         formatter={TooltipFormatter || ((Value) => `${Value}%`)}
         contentStyle={TOOLTIP_STYLE}
         itemStyle={TOOLTIP_ITEM_STYLE}
+        labelStyle={TOOLTIP_LABEL_STYLE}
       />
       <Legend wrapperStyle={{ fontSize: 12, color: "#a8a8a8" }} />
     </RechartsPieChart>
