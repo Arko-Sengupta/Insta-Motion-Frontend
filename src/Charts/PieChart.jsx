@@ -14,13 +14,34 @@ const TOOLTIP_STYLE = {
   color: "#f5f5f5",
 };
 
+const TOOLTIP_ITEM_STYLE = { color: "#f5f5f5" };
+
+const renderLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, value }) => {
+  if (value < 5) return null;
+  const RADIAN = Math.PI / 180;
+  const Radius = innerRadius + (outerRadius - innerRadius) * 0.55;
+  const X = cx + Radius * Math.cos(-midAngle * RADIAN);
+  const Y = cy + Radius * Math.sin(-midAngle * RADIAN);
+  return (
+    <text
+      x={X}
+      y={Y}
+      fill="#f5f5f5"
+      textAnchor="middle"
+      dominantBaseline="central"
+      fontSize={12}
+      fontWeight={600}
+    >
+      {`${value}%`}
+    </text>
+  );
+};
+
 const PieChart = ({
   Data,
   Colors,
-  Height = 250,
-  OuterRadius = 80,
-  ShowLabel = true,
-  LabelFormatter,
+  Height = 260,
+  OuterRadius = 90,
   TooltipFormatter,
 }) => (
   <ResponsiveContainer width="100%" height={Height}>
@@ -32,7 +53,8 @@ const PieChart = ({
         outerRadius={OuterRadius}
         dataKey="value"
         animationDuration={1000}
-        label={ShowLabel ? (LabelFormatter || (({ name, value }) => `${name}: ${value}%`)) : false}
+        labelLine={false}
+        label={renderLabel}
       >
         {Data.map((_, Idx) => (
           <Cell key={Idx} fill={Colors[Idx % Colors.length]} />
@@ -41,6 +63,7 @@ const PieChart = ({
       <Tooltip
         formatter={TooltipFormatter || ((Value) => `${Value}%`)}
         contentStyle={TOOLTIP_STYLE}
+        itemStyle={TOOLTIP_ITEM_STYLE}
       />
       <Legend wrapperStyle={{ fontSize: 12, color: "#a8a8a8" }} />
     </RechartsPieChart>
